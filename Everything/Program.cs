@@ -31,15 +31,6 @@ int DigitalRoot(long n)
     {
         return int.Parse(result.ToString());
     }
-
-    var cutResultByChars = result.ToString().ToCharArray();
-
-    result = cutResultByChars.Sum(c => long.Parse(c.ToString()));
-
-    if (result >= 10)
-    {
-        DigitalRoot(result);
-    }
-
-    return int.Parse(result.ToString());
+    
+    return DigitalRoot(result);
 }
