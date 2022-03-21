@@ -25,30 +25,21 @@ int DigitalRoot(long n)
 {
     var cutNumberByChars = n.ToString().ToCharArray();
 
-    long resultFirstOperation = 0;
-    
-    foreach (var c in cutNumberByChars)
+    var result = cutNumberByChars.Sum(c => long.Parse(c.ToString()));
+
+    if (result < 10)
     {
-        resultFirstOperation += long.Parse(c.ToString());
+        return int.Parse(result.ToString());
     }
 
-    if (resultFirstOperation >= 10)
-    {
-        var secondUpdatedNumber = resultFirstOperation.ToString().ToCharArray();
-        
-        resultFirstOperation = 0;
-        
-        foreach (var c in secondUpdatedNumber)
-        {
-            
-            resultFirstOperation += long.Parse(c.ToString());
-        }
+    var cutResultByChars = result.ToString().ToCharArray();
 
-        if (resultFirstOperation >= 10)
-        {
-            DigitalRoot(resultFirstOperation);
-        }
+    result = cutResultByChars.Sum(c => long.Parse(c.ToString()));
+
+    if (result >= 10)
+    {
+        DigitalRoot(result);
     }
-    
-    return int.Parse(resultFirstOperation.ToString());
+
+    return int.Parse(result.ToString());
 }
