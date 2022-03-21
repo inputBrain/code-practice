@@ -23,32 +23,32 @@ DigitalRoot(493193);
 
 int DigitalRoot(long n)
 {
-    var cArr = n.ToString().ToCharArray();
+    var cutNumberByChars = n.ToString().ToCharArray();
 
-    long updatedLong = 0;
+    long resultFirstOperation = 0;
     
-    foreach (var c in cArr)
+    foreach (var c in cutNumberByChars)
     {
-        updatedLong += long.Parse(c.ToString());
+        resultFirstOperation += long.Parse(c.ToString());
     }
 
-    if (updatedLong >= 10)
+    if (resultFirstOperation >= 10)
     {
-        var newLong = updatedLong.ToString().ToCharArray();
+        var secondUpdatedNumber = resultFirstOperation.ToString().ToCharArray();
         
-        updatedLong = 0;
+        resultFirstOperation = 0;
         
-        foreach (var c in newLong)
+        foreach (var c in secondUpdatedNumber)
         {
             
-            updatedLong += long.Parse(c.ToString());
+            resultFirstOperation += long.Parse(c.ToString());
         }
 
-        if (updatedLong >= 10)
+        if (resultFirstOperation >= 10)
         {
-            DigitalRoot(updatedLong);
+            DigitalRoot(resultFirstOperation);
         }
     }
     
-    return int.Parse(updatedLong.ToString());
+    return int.Parse(resultFirstOperation.ToString());
 }
