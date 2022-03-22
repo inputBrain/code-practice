@@ -17,7 +17,7 @@ public class Isogram
     }
 
 
-    public bool IsIsogram(string str, bool isBestPractices)
+    public bool BestPractices(string str)
     {
         return str.ToLower().Distinct().Count() == str.Length;
     }
