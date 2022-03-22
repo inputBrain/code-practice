@@ -1,5 +1,3 @@
-namespace CodeCodewars;
-
 public class Isogram
 {
     public bool IsIsogram(string str)
@@ -14,11 +12,11 @@ public class Isogram
                 }
             }
         }
-        
+
         return true;
     }
-    
-    
+
+
     public bool IsIsogram(string str, bool isBestPractices)
     {
         return str.ToLower().Distinct().Count() == str.Length;
