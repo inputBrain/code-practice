@@ -37,4 +37,15 @@ public class CodeTest
         var bestPractices = digital.BestPractices(493193);
         Assert.Equal(2, bestPractices);
     }
+
+    [Fact]
+    public void DuplicateCountTest()
+    {
+        var duplicate = Factory.Duplicate();
+
+        var count = duplicate.DuplicateCount("Indivisibility");
+        Assert.Equal(1, count);
+
+
+    }
 }
