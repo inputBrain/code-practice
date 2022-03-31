@@ -6,18 +6,18 @@ public class AlphabetPositionMain
     
     public string AlphabetPosition(string text)
     {
-        var positionCollection = new List<int>();
+        var indexCollection = new List<int>();
 
         foreach (var letter in text.ToLower())
         {
             var index = Alphabet.IndexOf(letter) +1;
             if (index > 0)
             {
-                positionCollection.Add(index);
+                indexCollection.Add(index);
             }
         }
 
-        return string.Join(" ", positionCollection);
+        return string.Join(" ", indexCollection);
         
         // return string.Join(" ", text.ToLower().Select(letter => Alphabet.IndexOf(letter) + 1).Where(index => index > 0).ToList());
     }
