@@ -1,5 +1,3 @@
-using Microsoft.VisualBasic.CompilerServices;
-
 namespace CodePractice;
 
 public class AlphabetPositionMain
@@ -12,9 +10,15 @@ public class AlphabetPositionMain
 
         foreach (var letter in text.ToLower())
         {
-            positionCollection.Add(Alphabet.IndexOf(letter));
+            var index = Alphabet.IndexOf(letter) +1;
+            if (index > 0)
+            {
+                positionCollection.Add(index);
+            }
         }
 
         return string.Join(" ", positionCollection);
+        
+        // return string.Join(" ", text.ToLower().Select(letter => Alphabet.IndexOf(letter) + 1).Where(index => index > 0).ToList());
     }
 }
