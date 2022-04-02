@@ -9,4 +9,6 @@ public static class Factory
     public static Duplicate Duplicate() => new Duplicate();
 
     public static AlphabetPositionMain AlphabetPosition() => new AlphabetPositionMain();
+    
+    public static ScrambliesMain ScrambliesMain() => new ScrambliesMain();
 }

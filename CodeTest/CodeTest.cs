@@ -63,6 +63,17 @@ public class CodeTest
         text = "a ;' b ;; cc c "; 
         result = alphabetPosition.AlphabetPosition(text);
         Assert.Equal("1 2 3 3 3", result);
-        
+    }
+
+    [Fact]
+    public void ScrambliesMainTest()
+    {
+        var model = Factory.ScrambliesMain();
+
+        var text = "cedewaraaossoqqyt";
+        var containsText = "codewars";
+
+        var result = model.Scramble(text, containsText);
+        Assert.True(result);
     }
 }
