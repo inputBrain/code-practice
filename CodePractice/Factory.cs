@@ -1,6 +1,6 @@
 namespace CodePractice;
 
-public static class Factory
+public class Factory
 {
     public static DigitalRootMain DigitalRoot() => new DigitalRootMain();
 
@@ -10,5 +10,5 @@ public static class Factory
 
     public static AlphabetPositionMain AlphabetPosition() => new AlphabetPositionMain();
     
-    public static ScrambliesMain ScrambliesMain() => new ScrambliesMain();
+    // public static ScrambliesMain ScrambliesMain() => new ScrambliesMain();
 }
