@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePractice", "CodePractic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeTest", "CodeTest\CodeTest.csproj", "{FDCEB937-E0B5-4684-9797-75F255CD1806}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePractice.Host", "CodePractice.Host\CodePractice.Host.csproj", "{8291ECC9-C4FC-4ED2-8A73-BB881C6BB132}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{FDCEB937-E0B5-4684-9797-75F255CD1806}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDCEB937-E0B5-4684-9797-75F255CD1806}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDCEB937-E0B5-4684-9797-75F255CD1806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8291ECC9-C4FC-4ED2-8A73-BB881C6BB132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8291ECC9-C4FC-4ED2-8A73-BB881C6BB132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8291ECC9-C4FC-4ED2-8A73-BB881C6BB132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8291ECC9-C4FC-4ED2-8A73-BB881C6BB132}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
