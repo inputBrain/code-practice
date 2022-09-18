@@ -1,4 +1,4 @@
-namespace CodePractice.Interesting;
+namespace CodePractice.InterestingCode;
 
 public class DrawStars
 {

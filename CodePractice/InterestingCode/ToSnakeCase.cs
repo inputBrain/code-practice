@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace CodePractice.Interesting;
+namespace CodePractice.InterestingCode;
 
 public class ToSnakeCase
 {

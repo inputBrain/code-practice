@@ -1,10 +1,10 @@
-namespace CodePractice;
+namespace CodePractice.Alphabet;
 
-public class AlphabetPositionMain
+public class AlphabetManipulation
 {
     private const string Alphabet = "abcdefghijklmnopqrstuvwxyz";
     
-    public string TextToAlphabetPositions(string text)
+    public static string TextToAlphabetPositions(string text)
     {
         var indexCollection = new List<int>();
 
@@ -23,11 +23,11 @@ public class AlphabetPositionMain
         // return string.Join(" ", text.ToLower().Select(letter => Alphabet.IndexOf(letter) + 1).Where(index => index > 0).ToList());
     }
 
-    public string AlphabetPositionsToText(List<int> alphabetPositions)
+    public static string AlphabetPositionsToText(List<int> alphabetPositions)
     {
         var preparedString = string.Empty;
 
-        foreach (var position in alphabetPositions)
+        foreach (var position in alphabetPositions.Where(x => x <= 26))
         {
             foreach (var alp in Alphabet)
             {
