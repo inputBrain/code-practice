@@ -2,51 +2,51 @@ namespace CodePractice.Reverse;
 
 public class ReverseText
 {
-    public static string ReverseWords(string? text = null)
+    public static string? ReverseWords(string? text = null)
     {
         var reversedWords = string.Empty;
 
         if (text != null)
         {
-            var splitUserText = text.Split(' ');
-            Array.Reverse(splitUserText);
+            var reversedUserText = text.Split(' ');
+            Array.Reverse(reversedUserText);
             
             
-            for (var i = 0; i <= splitUserText.Length - 1; i++)
+            for (var i = 0; i <= reversedUserText.Length - 1; i++)
             {
-                reversedWords += splitUserText[i];
+                reversedWords += reversedUserText[i] + ' ';
             }
-            Console.WriteLine("Reversed Words are:");
+            Console.WriteLine("Reversed words are:");
             Console.ForegroundColor = ConsoleColor.Green;
             
             Console.WriteLine(reversedWords);
             return reversedWords;
         }
         
-        Console.WriteLine("Enter the Text:");
+        Console.WriteLine("Enter your words which need to reverse:");
         Console.ForegroundColor = ConsoleColor.Yellow;
         
         var userTextInConsole = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(userTextInConsole))
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Error: text is empty or null. Please, write a text");
-            return string.Empty;
+            Console.WriteLine("Error: input text is empty or null. Please, write words which need to reverse");
+            return null;
         }
         
-        var splitUserTextInConsole = userTextInConsole.Split(' ');
-        Array.Reverse(splitUserTextInConsole);
+        var reversedTextInConsole = userTextInConsole.Split(' ');
+        Array.Reverse(reversedTextInConsole);
+        
+        for (var i = 0; i <= reversedTextInConsole.Length - 1; i++)
+        {
+            reversedWords += reversedTextInConsole[i] + ' ';
+        }
         
         Console.ForegroundColor = ConsoleColor.DarkBlue;
-        Console.WriteLine("\n Reversed Words are:");
-
-        for (var i = 0; i <= splitUserTextInConsole.Length - 1; i++)
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            reversedWords += splitUserTextInConsole[i];
-            Console.Write(splitUserTextInConsole[i]);
-        }
+        Console.WriteLine("\n Reversed words are:");
         
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(reversedWords);
 
         return reversedWords;
     }
