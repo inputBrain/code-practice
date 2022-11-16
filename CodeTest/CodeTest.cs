@@ -3,12 +3,12 @@
 //
 // namespace CodeTest;
 //
-// public class CodeTest
+// public class CodeTest : AbstractCaseTest
 // {
 //     [Fact]
 //     public void IsogramTest()
 //     {
-//         var isogram = Factory.Isogram();
+//         var isogram = _serviceContainer.Isogram.IsIsogram("moOse");
 //
 //         var isIsogram = isogram.IsIsogram("moOse");
 //         var bestPractices = isogram.BestPractices("moOse");
