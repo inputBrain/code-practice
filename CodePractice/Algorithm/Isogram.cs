@@ -2,7 +2,7 @@ namespace CodePractice.Algorithm;
 
 public class Isogram
 {
-    public static bool IsIsogram(string str)
+    public bool IsIsogram(string str)
     {
         for (var i = 0; i < str.Length; ++i)
         {
@@ -19,7 +19,7 @@ public class Isogram
     }
 
 
-    public static bool BestPractices(string str)
+    public bool BestPractices(string str)
     {
         return str.ToLower().Distinct().Count() == str.Length;
     }
