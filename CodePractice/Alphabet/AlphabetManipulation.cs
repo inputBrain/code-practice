@@ -2,7 +2,7 @@ namespace CodePractice.Alphabet;
 
 public class AlphabetManipulation
 {
-    private const string Alphabet = "abcdefghijklmnopqrstuvwxyz";
+    private const string EnglishAlphabet = "abcdefghijklmnopqrstuvwxyz";
     
     public static string TextToAlphabetPositions(string text)
     {
@@ -10,14 +10,13 @@ public class AlphabetManipulation
 
         foreach (var letter in text.ToLower())
         {
-            var index = Alphabet.IndexOf(letter) +1;
+            var index = EnglishAlphabet.IndexOf(letter) +1;
             if (index > 0)
             {
                 indexCollection.Add(index);
             }
         }
 
-        Console.WriteLine(string.Join(" ", indexCollection));
         return string.Join(" ", indexCollection);
         
         // return string.Join(" ", text.ToLower().Select(letter => Alphabet.IndexOf(letter) + 1).Where(index => index > 0).ToList());
@@ -29,9 +28,9 @@ public class AlphabetManipulation
 
         foreach (var position in alphabetPositions.Where(x => x <= 26))
         {
-            foreach (var alp in Alphabet)
+            foreach (var alp in EnglishAlphabet)
             {
-                var index = Alphabet.IndexOf(alp) + 1;
+                var index = EnglishAlphabet.IndexOf(alp) + 1;
                 if (position == index)
                 {
                     preparedString += alp;
@@ -39,7 +38,10 @@ public class AlphabetManipulation
             }
         }
 
-        Console.WriteLine(string.Join(" ", preparedString));
         return string.Join(" ", preparedString);
+        
+        // var preparedString = (from position in alphabetPositions.Where(x => x <= 26)
+        // from alp in EnglishAlphabet let index = EnglishAlphabet.IndexOf(alp) + 1
+        // where position == index select alp).Aggregate(string.Empty, (current, alp) => current + alp);
     }
 }
